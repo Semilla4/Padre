@@ -1,3 +1,6 @@
 "nbproject/" 
 "build/" 
 "dist/" 
+/ProyectoFinal/build/
+/ProyectoFinal/dist/
+/ProyectoFinal/nbproject/private/
