@@ -10,4 +10,9 @@ package proyectofinal;
  */
 public class Comprobante {
     
+    
+    
+    
 }
+
+
