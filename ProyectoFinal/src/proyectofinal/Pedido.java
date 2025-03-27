@@ -110,7 +110,7 @@ public class Pedido extends javax.swing.JFrame {
         jComboBox1.setToolTipText("");
 
         jComboBox2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Transferencia" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Transferencia", "Plin", "Yape" }));
 
         btnSalir.setBackground(new java.awt.Color(255, 0, 0));
         btnSalir.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
