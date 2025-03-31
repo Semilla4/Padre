@@ -63,17 +63,15 @@
                           </Group>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel20" alignment="0" pref="213" max="32767" attributes="0"/>
-                              <Component id="jLabel21" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel13" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="jLabel23" alignment="0" pref="213" max="32767" attributes="0"/>
-                              <Component id="jLabel24" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel22" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
-                              <Component id="jLabel27" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jLabel26" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel25" alignment="0" pref="141" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="txtNombre" alignment="0" pref="213" max="32767" attributes="0"/>
+                              <Component id="txtDescripcion" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtNPedido" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txtCantidad" alignment="0" pref="213" max="32767" attributes="0"/>
+                              <Component id="txtPrecio" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtEstado" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                              <Component id="txtTotal" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="txtIgv" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtMetodo" alignment="0" pref="213" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -104,50 +102,50 @@
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel13" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="txtNPedido" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel20" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtNombre" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel21" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtDescripcion" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel24" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtPrecio" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel22" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtEstado" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel23" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtCantidad" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel25" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtMetodo" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel26" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtIgv" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel27" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="txtTotal" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" pref="184" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="219" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnProcesar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -223,7 +221,7 @@
             <Property name="text" type="java.lang.String" value="Cliente:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="txtNPedido">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -232,7 +230,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel20">
+        <Component class="javax.swing.JLabel" name="txtNombre">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -241,7 +239,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel21">
+        <Component class="javax.swing.JLabel" name="txtDescripcion">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -250,7 +248,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel22">
+        <Component class="javax.swing.JLabel" name="txtEstado">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -259,7 +257,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel23">
+        <Component class="javax.swing.JLabel" name="txtCantidad">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -268,7 +266,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel24">
+        <Component class="javax.swing.JLabel" name="txtPrecio">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -277,7 +275,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel25">
+        <Component class="javax.swing.JLabel" name="txtMetodo">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -286,7 +284,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel26">
+        <Component class="javax.swing.JLabel" name="txtIgv">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -300,7 +298,7 @@
             <Property name="text" type="java.lang.String" value="Precio Total:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel27">
+        <Component class="javax.swing.JLabel" name="txtTotal">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">

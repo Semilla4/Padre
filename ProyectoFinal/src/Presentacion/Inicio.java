@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyectofinal;
-
+package Presentacion;
+import javax.swing.JOptionPane;
 //HOLA YA ESTOY AQUI xdddddddddddddddddddddddddddddddddddddddddddddddddddddd!!!!
   
 
@@ -33,7 +33,7 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCliente = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -42,7 +42,7 @@ public class Inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 170, 30));
+        jPanel1.add(txtCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 170, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("Cliente:");
@@ -62,8 +62,8 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2.setText("Fast Food");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectofinal/imagenes/logo.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +80,13 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        String cliente = txtCliente.getText().trim();
+        
+        if(cliente.isEmpty() || !cliente.matches("^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$")){
+            JOptionPane.showMessageDialog(this, "Error: Nombre inválido o contiene caracteres especiales");
+            return;
+        }
+        
         Pedido pe = new Pedido();
         pe.setVisible(true);
         this.dispose();
@@ -126,6 +133,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtCliente;
     // End of variables declaration//GEN-END:variables
 }
