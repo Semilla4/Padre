@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Pedido {
+public class Pedido extends javax.swing.JFrame {
     private int idPedido;
     private int idCliente;
     private String estado;

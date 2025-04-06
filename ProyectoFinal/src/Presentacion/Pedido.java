@@ -24,10 +24,20 @@ double sub;
     
     public Pedido() {
         initComponents();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // Centrar ventana
+        setSize(800, 600); // Definir tamaño
         mostrar1();
         mostrar2();
         mostrar3();
+    }
+
+    // Setters para recibir datos de Inicio
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
 
     @SuppressWarnings("unchecked")

@@ -84,12 +84,13 @@ public class Inicio extends javax.swing.JFrame {
         Pedido pe = null; // Declara pe fuera del if
 
         if (idCliente > 0) {
-            pe = new Pedido(); // Inicializa pe solo si el cliente se guardó
-            pe.setIdCliente(idCliente);
-            pe.setNombreCliente(cliente);
-            pe.setVisible(true);
-            this.dispose();
-        } else {
+        // Corrección: Usar la clase de presentación Pedido
+        Presentacion.Pedido pedidoFrame = new Presentacion.Pedido();
+        pedidoFrame.setIdCliente(idCliente);
+        pedidoFrame.setNombreCliente(cliente);
+        pedidoFrame.setVisible(true); // Mostrar el JFrame
+        this.dispose(); // Cerrar Inicio
+    } else {
             
             JOptionPane.showMessageDialog(this, "Error al guardar el cliente");
         }
