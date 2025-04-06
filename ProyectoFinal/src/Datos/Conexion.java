@@ -23,5 +23,4 @@ public class Conexion {
             cnx.close();
         }
     }
-    
 }
