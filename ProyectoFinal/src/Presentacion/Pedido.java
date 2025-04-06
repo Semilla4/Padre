@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Pedido extends javax.swing.JFrame {
-
+//Ojala que salga
 double sub;
     private int idCliente;
     private String nombreCliente;
