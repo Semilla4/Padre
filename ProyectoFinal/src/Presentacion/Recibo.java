@@ -56,22 +56,23 @@ public class Recibo extends javax.swing.JFrame {
     
     private void TerminosCondiciones() {
     
-    txtterminos.setText("Terminos y Condiciones \n" +
-        "-Responsable: Fast Food - Calle Pilon 145, La Molina - RUC: 10749720000\n" +
-        "-Informacion Recopilada: Datos personales (nombre, DNI, contacto,\n" + 
-        " dirección), detalles del pedido, método de pago (a través de\n" +
-        " pasarelas seguras), uso del servicio, datos técnicos (IP, navegador).\n" +
-        "-Compartir Información: Con proveedores de servicios(entrega, pago,\n" + 
-        " marketing), por ley, con consentimiento.\n" +
-        "-Envíos: Solo en el distrito. Entrega estimada: 30 min - 1 hora.\n" +
-        "Costo según distancia.\n" +
-        "-Devoluciones: Se aceptan por daños, error o retraso (notificar \n" + 
-        " máx. 1 hora después de recibir). Reembolso o cambio \n" + 
-        "(con pago de diferencia si aplica).\n" +
-        "-Pagos: Transferencias (Yape, Plin, banca móvil), tarjetas (Visa),\n" + 
-        " efectivo. Pagos seguros.\n" +
-        "-Precios: Consultar en la aplicación o local. Sujetos a cambio.\n" + 
-        " Facturas a solicitud.");
+    txtterminos.setText("""
+                        Terminos y Condiciones 
+                        -Responsable: Fast Food - Calle Pilon 145, La Molina - RUC: 10749720000
+                        -Informacion Recopilada: Datos personales (nombre, DNI, contacto,
+                         direcci\u00f3n), detalles del pedido, m\u00e9todo de pago (a trav\u00e9s de
+                         pasarelas seguras), uso del servicio, datos t\u00e9cnicos (IP, navegador).
+                        -Compartir Informaci\u00f3n: Con proveedores de servicios(entrega, pago,
+                         marketing), por ley, con consentimiento.
+                        -Env\u00edos: Solo en el distrito. Entrega estimada: 30 min - 1 hora.
+                        Costo seg\u00fan distancia.
+                        -Devoluciones: Se aceptan por da\u00f1os, error o retraso (notificar 
+                         m\u00e1x. 1 hora despu\u00e9s de recibir). Reembolso o cambio 
+                        (con pago de diferencia si aplica).
+                        -Pagos: Transferencias (Yape, Plin, banca m\u00f3vil), tarjetas (Visa),
+                         efectivo. Pagos seguros.
+                        -Precios: Consultar en la aplicaci\u00f3n o local. Sujetos a cambio.
+                         Facturas a solicitud.""");
     txtterminos.setCaretPosition(0);
     
     
@@ -119,19 +120,27 @@ public class Recibo extends javax.swing.JFrame {
         txtterminos = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         jLabel1.setText("Comprobante de pago");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(162, 6, -1, -1));
 
         jLabel2.setText("Precio del pedido:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 202, -1, -1));
 
         jLabel3.setText("Estado del Pedido:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 250, -1, -1));
 
         jLabel4.setText("Metodo de Pago:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 346, -1, -1));
 
         jLabel5.setText("IGV:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 396, -1, -1));
 
         btnProcesar.setText("Procesar Pago");
         btnProcesar.addActionListener(new java.awt.event.ActionListener() {
@@ -139,6 +148,7 @@ public class Recibo extends javax.swing.JFrame {
                 btnProcesarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnProcesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 706, -1, -1));
 
         btnCancelar.setText("Cancelar Pedido");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -146,164 +156,81 @@ public class Recibo extends javax.swing.JFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 706, -1, -1));
 
         jLabel6.setText("Descripción del pedido:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 154, -1, -1));
 
         jLabel10.setText("Cantidad:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 298, -1, -1));
 
         jLabel11.setText("N° Pedido:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 66, -1, -1));
 
         jLabel12.setText("Cliente:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 110, -1, -1));
 
         txtNPedido.setBackground(new java.awt.Color(255, 255, 255));
         txtNPedido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtNPedido.setOpaque(true);
+        jPanel1.add(txtNPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 60, 100, 22));
 
         txtNombre.setBackground(new java.awt.Color(255, 255, 255));
         txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtNombre.setOpaque(true);
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 104, 213, 22));
 
         txtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
         txtDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtDescripcion.setOpaque(true);
+        jPanel1.add(txtDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 148, 213, 22));
 
         txtEstado.setBackground(new java.awt.Color(255, 255, 255));
         txtEstado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtEstado.setOpaque(true);
+        jPanel1.add(txtEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 244, 144, 22));
 
         txtCantidad.setBackground(new java.awt.Color(255, 255, 255));
         txtCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtCantidad.setOpaque(true);
+        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 292, 213, 22));
 
         txtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         txtPrecio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtPrecio.setOpaque(true);
+        jPanel1.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 196, 213, 22));
 
         txtMetodo.setBackground(new java.awt.Color(255, 255, 255));
         txtMetodo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtMetodo.setOpaque(true);
+        jPanel1.add(txtMetodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 340, 213, 22));
 
         txtIgv.setBackground(new java.awt.Color(255, 255, 255));
         txtIgv.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtIgv.setOpaque(true);
+        jPanel1.add(txtIgv, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 390, 213, 22));
 
         jLabel7.setText("SubTotal:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 435, -1, -1));
 
         txtSubTotal.setBackground(new java.awt.Color(255, 255, 255));
         txtSubTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtSubTotal.setOpaque(true);
+        jPanel1.add(txtSubTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 429, 213, 22));
 
         txtterminos.setSelectionStart(1);
         scroll.setViewportView(txtterminos);
 
+        jPanel1.add(scroll, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 509, 416, 185));
+
         jLabel8.setText("Precio Total:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 475, -1, -1));
 
         txtTotal.setBackground(new java.awt.Color(255, 255, 255));
         txtTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtTotal.setOpaque(true);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
-                            .addComponent(txtDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtNPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCantidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMetodo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtIgv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(btnProcesar)
-                        .addGap(46, 46, 46)
-                        .addComponent(btnCancelar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(112, 112, 112))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(36, 36, 36)
-                                .addComponent(jLabel11))
-                            .addComponent(txtNPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel12))
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtMetodo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtIgv, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7)
-                    .addComponent(txtSubTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnProcesar)
-                    .addComponent(btnCancelar))
-                .addGap(22, 22, 22))
-        );
+        jPanel1.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 469, 100, 22));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 750));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -440,6 +367,7 @@ public void Comprobante(int id, String cliente, Map<String, String> datos) {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane scroll;
     private javax.swing.JLabel txtCantidad;
