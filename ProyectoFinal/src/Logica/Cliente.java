@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Cliente {
+public class Cliente extends javax.swing.JFrame{
     private int idCliente;
     private String nombre;
     

@@ -5,9 +5,11 @@
 package Presentacion;
 import Datos.Conexion;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Map;
+import java.awt.Color;
 
 public class Recibo extends javax.swing.JFrame {
     private int idPedido;
@@ -30,6 +32,7 @@ public class Recibo extends javax.swing.JFrame {
         this.metodoPago = metodoPago;
         this.subtotal = subtotal;
         mostrarDetalles();
+        TerminosCondiciones();
     }
 
     private void mostrarDetalles() {
@@ -41,18 +44,19 @@ public class Recibo extends javax.swing.JFrame {
         txtMetodo.setText(metodoPago);
 
         double igv = subtotal * 0.18;
-        double total = subtotal + igv;
+        double total = subtotal;
 
         txtIgv.setText(String.format("S/ %.2f", igv));
         txtTotal.setText(String.format("S/ %.2f", total));
-        txtSubTotal.setText(String.format("S/ %.2f", subtotal)); // Asegúrate de tener este campo en tu frame Recibo
+        txtSubTotal.setText(String.format("S/ %.2f", subtotal - igv)); // Asegúrate de tener este campo en tu frame Recibo
         txtEstado.setText("Pendiente"); // Estado inicial del pedido
+       
+           
     }
-    Inicio ini = new Inicio();
     
-    private void TerminosCondiciones (){
-        txtterminos.setText
-        ("Terminos y Condiciones \n" +
+    private void TerminosCondiciones() {
+    
+    txtterminos.setText("Terminos y Condiciones \n" +
         "-Responsable: Fast Food - Calle Pilon 145, La Molina - RUC: 10749720000\n" +
         "-Informacion Recopilada: Datos personales (nombre, DNI, contacto,\n" + 
         " dirección), detalles del pedido, método de pago (a través de\n" +
@@ -60,22 +64,31 @@ public class Recibo extends javax.swing.JFrame {
         "-Compartir Información: Con proveedores de servicios(entrega, pago,\n" + 
         " marketing), por ley, con consentimiento.\n" +
         "-Envíos: Solo en el distrito. Entrega estimada: 30 min - 1 hora.\n" +
-        "-Costo según distancia.\n" +
-        "-Devoluciones: Se aceptan por daños, error o retraso (notificar máx. 1 hora\n" +
-        " después de recibir). Reembolso o cambio (con pago de diferencia si aplica).\n" +
-        "-Pagos: Transferencias (Yape, Plin, banca móvil), tarjetas (Visa), efectivo.\n" +
-        " Pagos seguros.\n" +
-        "-Precios: Consultar en la aplicación o local.\n" +
-        " Sujetos a cambio. Facturas a solicitud.");
-    }
+        "Costo según distancia.\n" +
+        "-Devoluciones: Se aceptan por daños, error o retraso (notificar \n" + 
+        " máx. 1 hora después de recibir). Reembolso o cambio \n" + 
+        "(con pago de diferencia si aplica).\n" +
+        "-Pagos: Transferencias (Yape, Plin, banca móvil), tarjetas (Visa),\n" + 
+        " efectivo. Pagos seguros.\n" +
+        "-Precios: Consultar en la aplicación o local. Sujetos a cambio.\n" + 
+        " Facturas a solicitud.");
+    txtterminos.setCaretPosition(0);
+    
+    
+    
+}
+    Inicio ini = new Inicio();
+    
+    
     
     public Recibo() {
         initComponents();
         setLocationRelativeTo(null);    
-        TerminosCondiciones();
+        
 
     }
 
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -102,7 +115,7 @@ public class Recibo extends javax.swing.JFrame {
         txtIgv = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtSubTotal = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        scroll = new javax.swing.JScrollPane();
         txtterminos = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JLabel();
@@ -180,7 +193,8 @@ public class Recibo extends javax.swing.JFrame {
         txtSubTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtSubTotal.setOpaque(true);
 
-        jScrollPane1.setViewportView(txtterminos);
+        txtterminos.setSelectionStart(1);
+        scroll.setViewportView(txtterminos);
 
         jLabel8.setText("Precio Total:");
 
@@ -192,10 +206,6 @@ public class Recibo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(129, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(112, 112, 112))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -216,23 +226,28 @@ public class Recibo extends javax.swing.JFrame {
                             .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                             .addComponent(txtDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtNPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCantidad, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                            .addComponent(txtCantidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMetodo, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                            .addComponent(txtMetodo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtIgv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)))
+                            .addComponent(txtSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(btnProcesar)
                         .addGap(46, 46, 46)
                         .addComponent(btnCancelar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(112, 112, 112))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -282,7 +297,7 @@ public class Recibo extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scroll, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnProcesar)
@@ -294,9 +309,7 @@ public class Recibo extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 33, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,7 +318,9 @@ public class Recibo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-private int id;
+
+    
+    private int id;
 private String cliente;
 private Map<String, String> datos;
 
@@ -426,7 +441,7 @@ public void Comprobante(int id, String cliente, Map<String, String> datos) {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane scroll;
     private javax.swing.JLabel txtCantidad;
     private javax.swing.JLabel txtDescripcion;
     private javax.swing.JLabel txtEstado;
