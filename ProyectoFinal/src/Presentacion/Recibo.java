@@ -44,14 +44,36 @@ public class Recibo extends javax.swing.JFrame {
         double total = subtotal + igv;
 
         txtIgv.setText(String.format("S/ %.2f", igv));
-        txtSubTotal.setText(String.format("S/ %.2f", total));
+        txtTotal.setText(String.format("S/ %.2f", total));
         txtSubTotal.setText(String.format("S/ %.2f", subtotal)); // Asegúrate de tener este campo en tu frame Recibo
         txtEstado.setText("Pendiente"); // Estado inicial del pedido
     }
-
+    Inicio ini = new Inicio();
+    
+    private void TerminosCondiciones (){
+        txtterminos.setText
+        ("Terminos y Condiciones \n" +
+        "-Responsable: Fast Food - Calle Pilon 145, La Molina - RUC: 10749720000\n" +
+        "-Informacion Recopilada: Datos personales (nombre, DNI, contacto,\n" + 
+        " dirección), detalles del pedido, método de pago (a través de\n" +
+        " pasarelas seguras), uso del servicio, datos técnicos (IP, navegador).\n" +
+        "-Compartir Información: Con proveedores de servicios(entrega, pago,\n" + 
+        " marketing), por ley, con consentimiento.\n" +
+        "-Envíos: Solo en el distrito. Entrega estimada: 30 min - 1 hora.\n" +
+        "-Costo según distancia.\n" +
+        "-Devoluciones: Se aceptan por daños, error o retraso (notificar máx. 1 hora\n" +
+        " después de recibir). Reembolso o cambio (con pago de diferencia si aplica).\n" +
+        "-Pagos: Transferencias (Yape, Plin, banca móvil), tarjetas (Visa), efectivo.\n" +
+        " Pagos seguros.\n" +
+        "-Precios: Consultar en la aplicación o local.\n" +
+        " Sujetos a cambio. Facturas a solicitud.");
+    }
+    
     public Recibo() {
         initComponents();
         setLocationRelativeTo(null);    
+        TerminosCondiciones();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -81,7 +103,7 @@ public class Recibo extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtSubTotal = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        txtterminos = new javax.swing.JTextPane();
         jLabel8 = new javax.swing.JLabel();
         txtTotal = new javax.swing.JLabel();
 
@@ -120,31 +142,51 @@ public class Recibo extends javax.swing.JFrame {
 
         jLabel12.setText("Cliente:");
 
+        txtNPedido.setBackground(new java.awt.Color(255, 255, 255));
         txtNPedido.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtNPedido.setOpaque(true);
 
+        txtNombre.setBackground(new java.awt.Color(255, 255, 255));
         txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtNombre.setOpaque(true);
 
+        txtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
         txtDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtDescripcion.setOpaque(true);
 
+        txtEstado.setBackground(new java.awt.Color(255, 255, 255));
         txtEstado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEstado.setOpaque(true);
 
+        txtCantidad.setBackground(new java.awt.Color(255, 255, 255));
         txtCantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtCantidad.setOpaque(true);
 
+        txtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         txtPrecio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtPrecio.setOpaque(true);
 
+        txtMetodo.setBackground(new java.awt.Color(255, 255, 255));
         txtMetodo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtMetodo.setOpaque(true);
 
+        txtIgv.setBackground(new java.awt.Color(255, 255, 255));
         txtIgv.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtIgv.setOpaque(true);
 
         jLabel7.setText("SubTotal:");
 
+        txtSubTotal.setBackground(new java.awt.Color(255, 255, 255));
         txtSubTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtSubTotal.setOpaque(true);
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(txtterminos);
 
         jLabel8.setText("Precio Total:");
 
+        txtTotal.setBackground(new java.awt.Color(255, 255, 255));
         txtTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtTotal.setOpaque(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -179,9 +221,8 @@ public class Recibo extends javax.swing.JFrame {
                             .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtMetodo, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
                             .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtIgv, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtSubTotal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
+                            .addComponent(txtIgv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtSubTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addComponent(btnProcesar)
@@ -189,7 +230,7 @@ public class Recibo extends javax.swing.JFrame {
                         .addComponent(btnCancelar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addComponent(jScrollPane1)
                 .addContainerGap())
         );
@@ -255,7 +296,7 @@ public class Recibo extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,7 +345,8 @@ public void Comprobante(int id, String cliente, Map<String, String> datos) {
             Conexion.cerrarConexion(conn);
             
             txtEstado.setText("Cancelado");
-            dispose();
+            this.setVisible(false);
+             ini.setVisible(true);
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error de base de datos: " + e.getMessage());
         }
@@ -325,7 +367,8 @@ public void Comprobante(int id, String cliente, Map<String, String> datos) {
 
         txtEstado.setText("Atendido");
         JOptionPane.showMessageDialog(null, "Gracias por su Compra, Vuelva Pronto");
-        dispose();
+        this.setVisible(false);
+             ini.setVisible(true);
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(this, "Error de base de datos: " + e.getMessage());
     }
@@ -384,7 +427,6 @@ public void Comprobante(int id, String cliente, Map<String, String> datos) {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel txtCantidad;
     private javax.swing.JLabel txtDescripcion;
     private javax.swing.JLabel txtEstado;
@@ -395,6 +437,7 @@ public void Comprobante(int id, String cliente, Map<String, String> datos) {
     private javax.swing.JLabel txtPrecio;
     private javax.swing.JLabel txtSubTotal;
     private javax.swing.JLabel txtTotal;
+    private javax.swing.JTextPane txtterminos;
     // End of variables declaration//GEN-END:variables
 
     
